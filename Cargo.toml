@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-imgui = "*"
+imgui = "0.12.0"
 imgui-wgpu = "*"
-pollster = "0.4.0"
+imgui-winit-support = "0.13.0"
 wgpu = "23.0.1"
 winit = "0.30.5"
