@@ -25,18 +25,21 @@ export component AppWindow inherits Window {
                 height: 100%;
                 background: #363636;
 
-                Text {
-                    text: "Instrument List";
+                VerticalBox {
+                    Text {
+                        text: "Instrument List";
+                    }
+    
+                    Button {
+                        text: "Increase";
+                        clicked => { request-increase-value(); }
+                    }
+                    Button {
+                        text: "Increase";
+                        clicked => { request-increase-value(); }
+                    }
                 }
-
-                Button {
-                    text: "Increase";
-                    clicked => { request-increase-value(); }
-                }
-                Button {
-                    text: "Increase";
-                    clicked => { request-increase-value(); }
-                }
+                
             }
         }
 
