@@ -1,0 +1,82 @@
+import { Button, VerticalBox, HorizontalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in-out property <int> counter: 42;
+    callback request-increase-value();
+
+    preferred-height: 720px;
+    preferred-width: 1280px;
+    title: "Motion Sketch";
+    
+
+    background: #fd8686;
+
+    default-font-family: "Cascadia Mono";
+    default-font-size: 16px;
+
+    HorizontalBox {
+        padding: 0px;
+        spacing: 0px;
+        VerticalBox {
+            padding: 0px;
+            Rectangle {
+                padding: 0px;
+                width: 20%;
+                height: 100%;
+                background: #363636;
+
+                Text {
+                    text: "Instrument List";
+                }
+
+                Button {
+                    text: "Increase";
+                    clicked => { request-increase-value(); }
+                }
+                Button {
+                    text: "Increase";
+                    clicked => { request-increase-value(); }
+                }
+            }
+        }
+
+        VerticalBox {
+            padding: 0px;
+            spacing: 0px;
+            Canvas:= Rectangle {
+                padding: 0px;
+                width: 60%;
+                height: 80%;
+                background: #363636;
+
+                Text {
+                    text: "ViewPort";
+                }
+            }
+            Rectangle {
+                padding: 0px;
+                width: 60%;
+                height: 20%;
+                background: #8b8b8b;
+
+                Text {
+                    text: "Animation Timeline";
+                }
+            }
+        }
+
+        VerticalBox {
+            padding: 0px;
+            Rectangle {
+                padding: 0px;
+                width: 20%;
+                height: 100%;
+                background: #191919;
+
+                Text {
+                    text: "Properties";
+                }
+            }
+        }
+    }
+}

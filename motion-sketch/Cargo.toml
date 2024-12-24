@@ -1,0 +1,16 @@
+[package]
+name = "motion-sketch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+slint = {version = "*", features = ["raw-window-handle-06", "renderer-skia"]}
+skia-safe = "*"
+raw-window-handle = "0.6.2"
+anyhow = "1.0.95"
+
+[build-dependencies]
+slint-build = "1.8.0"
+
